@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Producto · SELBA Cargo</title>
+<meta name="description" content="Inventario, eventos, hojas de carga con doble check, ruta del evento, incidencias, roles y trazabilidad. Así funciona SELBA Cargo.">
+<meta name="theme-color" content="#111c15">
+<link rel="icon" href="icon-192.png">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Oswald:wght@500;600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<nav class="nav">
+  <div class="wrap">
+    <a class="brand" href="index.html"><img src="icon-192.png" alt=""><span>SELBA <span class="c">C.A.R.G.O</span></span></a>
+    <div class="nav-links" id="navlinks">
+      <a href="index.html">Inicio</a>
+      <a href="producto.html" class="active">Producto</a>
+      <a href="precios.html">Precios</a>
+      <a href="contacto.html">Contacto</a>
+    </div>
+    <div class="nav-cta">
+      <a class="btn btn-primary" href="contacto.html">Solicitar demo</a>
+      <button class="nav-toggle" id="navtoggle" aria-label="Menú"><span></span><span></span><span></span></button>
+    </div>
+  </div>
+</nav>
+
+<header class="hero" style="padding-bottom:clamp(48px,7vw,80px)">
+  <div class="wrap">
+    <span class="eyebrow">El producto</span>
+    <h1 style="max-width:16ch">Toda la operativa, en una herramienta que se entiende.</h1>
+    <p class="lead" style="margin-top:20px">Sin manuales de 80 páginas. Cada función responde a un momento real de tu trabajo: dar de alta material, montar un evento, preparar la carga, salir a ruta y volver registrando lo que pasó.</p>
+  </div>
+</header>
+
+<!-- Inventario -->
+<section>
+  <div class="wrap">
+    <div class="grid grid-2" style="align-items:center;gap:48px">
+      <div class="reveal">
+        <span class="eyebrow">Inventario</span>
+        <h2 style="margin:14px 0 16px">El material se encuentra escribiendo.</h2>
+        <p class="lead">Organizado por departamento y subfamilia (Audio, Iluminación, Vídeo, Rigging, Escenario, Electricidad, Backline, Herramientas, Consumibles), pero pensado para buscar: escribe "Curvature", "M32" o "Beam" y aparece. Referencia y número de serie se generan solos.</p>
+        <ul class="plan" style="border:0;padding:0;background:none;margin-top:18px">
+          <li>Stock por cantidad, con referencia y serie automáticas</li>
+          <li>Disponibilidad por fechas: qué hay libre y qué está comprometido</li>
+          <li>QR por equipo para identificarlo al vuelo</li>
+        </ul>
+      </div>
+      <div class="manifest reveal" style="transform:rotate(-.8deg)">
+        <div class="m-head"><div><div class="t">Inventario</div><div class="n">Buscar: curvature</div></div></div>
+        <div class="m-fam">Audio · Altavoces</div>
+        <div class="m-row"><span class="ref">AL01</span><span class="nm" style="flex:1">Curvature Top</span><span class="q">8</span></div>
+        <div class="m-row"><span class="ref">SB02</span><span class="nm" style="flex:1">Curvature Sub</span><span class="q">4</span></div>
+        <div class="m-row"><span class="ref">RK01</span><span class="nm" style="flex:1">Curvature Rack</span><span class="q">1</span></div>
+        <div class="m-foot" style="background:rgba(45,90,61,.08);color:var(--forest)">Libres en esas fechas · listos para asignar</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Eventos + Material -->
+<section class="section-pale">
+  <div class="wrap">
+    <div class="grid grid-2" style="align-items:center;gap:48px">
+      <div class="manifest reveal">
+        <div class="m-head"><div><div class="t">Hoja de carga</div><div class="n">Material</div></div><div class="t">P / C</div></div>
+        <div class="m-cols"><span class="pc">P</span><span class="pc">C</span><span style="flex:1">Artículo</span></div>
+        <div class="m-fam">Audio</div>
+        <div class="m-row"><span class="chk on p">✓</span><span class="chk on c">✓</span><span class="q">2×</span><span class="ref">AL01</span><span class="nm">Curvature Top</span></div>
+        <div class="m-row"><span class="chk on p">✓</span><span class="chk c"></span><span class="q">4×</span><span class="ref">SB02</span><span class="nm">Curvature Sub</span></div>
+        <div class="m-foot">Preparado en azul · Cargado en verde</div>
+      </div>
+      <div class="reveal">
+        <span class="eyebrow">Eventos y carga</span>
+        <h2 style="margin:14px 0 16px">Asigna, prepara y carga sin sustos.</h2>
+        <p class="lead">Cada evento lleva sus fechas, lugar, vehículo y equipo. Al asignar material, la app avisa si un equipo ya está comprometido en otras fechas. La hoja de carga tiene doble check: <strong>P</strong> de preparado (en la nave) y <strong>C</strong> de cargado (en la furgoneta).</p>
+        <ul class="plan" style="border:0;padding:0;background:none;margin-top:18px">
+          <li>Detección automática de solapes de material</li>
+          <li>Doble control: preparado y cargado, con bloqueo al confirmar</li>
+          <li>Descarga con registro de incidencias por artículo</li>
+          <li>Hoja de carga lista para imprimir o guardar en PDF A4</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Ruta -->
+<section>
+  <div class="wrap">
+    <div class="grid grid-2" style="align-items:center;gap:48px">
+      <div class="reveal">
+        <span class="eyebrow">Ruta del evento</span>
+        <h2 style="margin:14px 0 16px">La hoja de ruta que todo el equipo entiende.</h2>
+        <p class="lead">Cliente, contactos, ubicación, vehículo y personal, más un timeline de horarios (salida de nave, montaje, prueba de sonido, evento, desmontaje) que se ordena solo por hora. Los técnicos la consultan en PDF, lista para el bolsillo.</p>
+      </div>
+      <div class="manifest reveal" style="transform:rotate(.8deg)">
+        <div class="m-head"><div><div class="t">Hoja de ruta</div><div class="n">Gala Baile</div></div></div>
+        <div class="m-row"><span class="ref">10:00</span><span class="nm" style="flex:1">Salida nave</span></div>
+        <div class="m-row"><span class="ref">10:30</span><span class="nm" style="flex:1">Llegada recinto</span></div>
+        <div class="m-row"><span class="ref">13:00</span><span class="nm" style="flex:1">Prueba de sonido</span></div>
+        <div class="m-row"><span class="ref">18:00</span><span class="nm" style="flex:1">Inicio del evento</span></div>
+        <div class="m-foot" style="background:rgba(45,90,61,.08);color:var(--forest)">Ordenado por hora · exportable en PDF</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Roles + Móvil -->
+<section class="section-dark">
+  <div class="wrap">
+    <div class="sec-head reveal"><span class="eyebrow on-dark">Pensado para el equipo</span><h2>Cada rol ve lo que necesita. Ni más, ni menos.</h2></div>
+    <div class="grid grid-3">
+      <div class="card reveal" style="background:rgba(255,255,255,.04);border-color:var(--line-d);color:#fff"><span class="tag">Administrador</span><h3 style="color:#fff">Control total</h3><p style="color:#aebfb4">Inventario, eventos, incidencias y panel con historiales en PDF.</p></div>
+      <div class="card reveal" style="background:rgba(255,255,255,.04);border-color:var(--line-d);color:#fff"><span class="tag">Responsable</span><h3 style="color:#fff">Gestiona eventos</h3><p style="color:#aebfb4">Monta eventos, asigna material y resuelve incidencias.</p></div>
+      <div class="card reveal" style="background:rgba(255,255,255,.04);border-color:var(--line-d);color:#fff"><span class="tag">Técnico</span><h3 style="color:#fff">A pie de furgoneta</h3><p style="color:#aebfb4">Marca preparado y cargado, y consulta la ruta en PDF.</p></div>
+    </div>
+    <p class="lead reveal" style="margin-top:34px;color:#b9c9bf">Funciona en el navegador y se instala como app en el móvil. La misma herramienta en la oficina y en la nave.</p>
+  </div>
+</section>
+
+<!-- CTA -->
+<section class="section-forest">
+  <div class="wrap" style="text-align:center">
+    <div class="reveal" style="max-width:720px;margin:0 auto">
+      <h2 style="margin-bottom:18px">Pruébalo con tu propio material.</h2>
+      <p class="lead" style="margin:0 auto 30px;color:#cfe3d6">Te montamos una demo con tu inventario y un evento real para que lo veas funcionando.</p>
+      <a class="btn btn-primary btn-lg" href="contacto.html">Solicitar demo</a>
+    </div>
+  </div>
+</section>
+
+<footer class="footer">
+  <div class="wrap">
+    <div class="top">
+      <div>
+        <div class="brand"><img src="icon-192.png" alt=""><span>SELBA C.A.R.G.O</span></div>
+        <p style="max-width:34ch">Coordinación de Almacenes, Recursos y Gestión Operativa. Del almacén al escenario.</p>
+      </div>
+      <div class="cols">
+        <div class="col"><h4>Producto</h4><a href="producto.html">Cómo funciona</a><a href="precios.html">Precios</a><a href="contacto.html">Solicitar demo</a></div>
+        <div class="col"><h4>Contacto</h4><a href="contacto.html">Escríbenos</a><a href="mailto:hola@selbacargo.com">hola@selbacargo.com</a><a href="contacto.html">Lista de espera</a></div>
+      </div>
+    </div>
+    <div class="legal">
+      <span class="idea">Un producto de <b>SELBA IDEA</b></span>
+      <span>© <span data-year>2026</span> SELBA IDEA · Huesca, España</span>
+    </div>
+  </div>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
