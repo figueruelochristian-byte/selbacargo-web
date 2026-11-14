@@ -4,105 +4,152 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <title>Contacto · SELBA Cargo</title>
-<meta name="description" content="Solicita una demo, pide presupuesto o únete a la lista de espera de SELBA Cargo.">
-<meta name="theme-color" content="#111c15">
+<meta name="description" content="Solicita una demo o un presupuesto de SELBA Cargo. Teléfono 667 93 86 30 · selbaidea@gmail.com · Huesca.">
+<meta name="theme-color" content="#1E1F24">
 <link rel="icon" href="icon-192.png">
+<link rel="apple-touch-icon" href="icon-192.png">
+<meta property="og:title" content="Contacto · SELBA Cargo">
+<meta property="og:description" content="Solicita una demo o un presupuesto de SELBA Cargo. Teléfono 667 93 86 30 · selbaidea@gmail.com · Huesca.">
+<meta property="og:image" content="logo.png">
+<meta property="og:locale" content="es_ES">
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Oswald:wght@500;600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Oswald:wght@500;600&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="styles.css">
 </head>
 <body>
 
-<nav class="nav">
-  <div class="wrap">
-    <a class="brand" href="index.html"><img src="icon-192.png" alt=""><span>SELBA <span class="c">C.A.R.G.O</span></span></a>
-    <div class="nav-links" id="navlinks">
+<header class="site-header">
+  <div class="container">
+    <a class="logo" href="index.html" aria-label="SELBA Cargo, inicio"><img src="img/logo-selba-cargo.png" alt="SELBA Cargo" width="114" height="34"></a>
+    <nav class="nav" id="nav" aria-label="Principal">
       <a href="index.html">Inicio</a>
       <a href="producto.html">Producto</a>
       <a href="precios.html">Precios</a>
-      <a href="contacto.html" class="active">Contacto</a>
+      <a href="contacto.html" aria-current="page">Contacto</a>
+      <div class="nav-mobile-cta"><a class="btn btn--primary" href="contacto.html">Solicitar demo</a></div>
+    </nav>
+    <div class="header-actions">
+      <a class="header-phone" href="tel:+34667938630"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1.9.4 1.8.7 2.7a2 2 0 0 1-.5 2.1L8 9.8a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.7.7a2 2 0 0 1 1.7 2z"/></svg>667 93 86 30</a>
+      <a class="btn btn--primary" href="contacto.html">Solicitar demo</a>
     </div>
-    <div class="nav-cta">
-      <a class="btn btn-primary" href="#form">Solicitar demo</a>
-      <button class="nav-toggle" id="navtoggle" aria-label="Menú"><span></span><span></span><span></span></button>
-    </div>
-  </div>
-</nav>
-
-<header class="hero" style="padding-bottom:clamp(40px,6vw,64px)">
-  <div class="wrap">
-    <span class="eyebrow">Contacto</span>
-    <h1 style="max-width:16ch">Hablemos de cómo mueves tu material.</h1>
-    <p class="lead" style="margin-top:20px">Pide una demo, un presupuesto o únete a la lista de espera. Te respondemos pronto, sin rodeos.</p>
+    <button class="menu-btn" id="menuBtn" aria-label="Abrir menú" aria-expanded="false" aria-controls="nav"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16"/></svg></button>
   </div>
 </header>
 
-<section>
-  <div class="wrap">
-    <div class="grid grid-2" style="gap:48px;align-items:start">
-      <div class="reveal" id="form">
-        <h2 style="margin-bottom:8px">Escríbenos</h2>
-        <p style="margin-bottom:26px">Cuéntanos lo justo y nos ponemos en contacto contigo.</p>
+<main>
 
-        <!-- Para activar el envío: crea un formulario gratis en formspree.io y
-             sustituye TU_ID_FORMSPREE por el tuyo (action). Mientras tanto,
-             puedes usar el correo directo de abajo. -->
-        <form class="form" action="https://formspree.io/f/TU_ID_FORMSPREE" method="POST">
-          <div class="two">
-            <div class="field"><label for="nombre">Nombre</label><input id="nombre" name="nombre" type="text" required></div>
-            <div class="field"><label for="empresa">Empresa</label><input id="empresa" name="empresa" type="text"></div>
-          </div>
-          <div class="two">
-            <div class="field"><label for="email">Email</label><input id="email" name="email" type="email" required></div>
-            <div class="field"><label for="tel">Teléfono</label><input id="tel" name="telefono" type="tel"></div>
-          </div>
-          <div class="field"><label for="asunto">¿Qué necesitas?</label>
-            <select id="asunto" name="asunto">
-              <option>Solicitar una demo</option>
-              <option>Pedir presupuesto</option>
-              <option>Unirme a la lista de espera</option>
-              <option>Otra consulta</option>
-            </select>
-          </div>
-          <div class="field"><label for="mensaje">Mensaje</label><textarea id="mensaje" name="mensaje" rows="4" placeholder="Tamaño de tu empresa, qué material mueves, qué te gustaría resolver…"></textarea></div>
-          <input type="text" name="_gotcha" style="display:none" tabindex="-1" autocomplete="off">
-          <input type="hidden" name="_subject" value="Nuevo contacto · SELBA Cargo">
-          <button class="btn btn-primary btn-lg" type="submit">Enviar</button>
-        </form>
-      </div>
-
-      <aside class="reveal">
-        <div class="card" style="background:var(--pale);border:0">
-          <span class="eyebrow" style="display:block;margin-bottom:12px">Directo</span>
-          <h3 style="margin-bottom:6px">Correo</h3>
-          <p style="margin-bottom:18px"><a href="mailto:hola@selbacargo.com" style="color:var(--forest);font-weight:600">hola@selbacargo.com</a></p>
-          <h3 style="margin-bottom:6px">Dónde estamos</h3>
-          <p>Huesca, Aragón (España).<br>Trabajamos con empresas de toda España.</p>
-        </div>
-        <div class="card" style="margin-top:20px">
-          <span class="tag" style="font-family:var(--fmono);font-size:.64rem;letter-spacing:.14em;text-transform:uppercase;color:var(--orange)">Lista de espera</span>
-          <h3 style="margin:8px 0 6px">¿Aún no es el momento?</h3>
-          <p>Déjanos tu email con el asunto "lista de espera" y te avisamos de novedades y disponibilidad.</p>
-        </div>
-      </aside>
-    </div>
+<section class="page-hero">
+  <div class="container">
+    <div class="crumbs"><a href="index.html">Inicio</a><span>/</span>Contacto</div>
+    <h1 class="display">Hablemos de cómo mueves tu material<span class="hl">.</span></h1>
+    <p class="lead">Pide una demo, un presupuesto o resuelve una duda. Puedes escribirnos, llamarnos o dejarnos tus datos y te contactamos.</p>
   </div>
 </section>
 
-<footer class="footer">
-  <div class="wrap">
-    <div class="top">
-      <div>
-        <div class="brand"><img src="icon-192.png" alt=""><span>SELBA C.A.R.G.O</span></div>
-        <p style="max-width:34ch">Coordinación de Almacenes, Recursos y Gestión Operativa. Del almacén al escenario.</p>
+<section class="section" style="border-top:0">
+  <div class="container contact-grid">
+    <div>
+      <h2 class="display" style="font-size:clamp(1.6rem,2.6vw,2.1rem)">Escríbenos</h2>
+      <p class="mt-8 mb-24">Con lo básico nos basta para preparar la conversación.</p>
+
+      <!--
+        ENVÍO DEL FORMULARIO
+        · Sin configurar nada: al pulsar «Enviar» se abre el correo del visitante
+          con el mensaje ya redactado para selbaidea@gmail.com.
+        · Para recibirlo directamente: crea un formulario gratuito en formspree.io
+          con el correo selbaidea@gmail.com y pega su ID en data-formspree="xxxxxxx".
+      -->
+      <form class="form" id="contactForm" data-formspree="" data-email="selbaidea@gmail.com" novalidate>
+        <div class="row2">
+          <div class="field"><label for="nombre">Nombre <span class="req">*</span></label><input id="nombre" name="nombre" type="text" autocomplete="name" required></div>
+          <div class="field"><label for="empresa">Empresa</label><input id="empresa" name="empresa" type="text" autocomplete="organization"></div>
+        </div>
+        <div class="row2">
+          <div class="field"><label for="email">Correo electrónico <span class="req">*</span></label><input id="email" name="email" type="email" autocomplete="email" required></div>
+          <div class="field"><label for="tel">Teléfono</label><input id="tel" name="telefono" type="tel" autocomplete="tel"></div>
+        </div>
+        <div class="row2">
+          <div class="field"><label for="asunto">Motivo</label>
+            <select id="asunto" name="asunto">
+              <option>Solicitar una demo</option>
+              <option>Pedir presupuesto</option>
+              <option>Promoción fundadores</option>
+              <option>Otra consulta</option>
+            </select>
+          </div>
+          <div class="field"><label for="equipo">Personas en el equipo</label>
+            <select id="equipo" name="equipo">
+              <option value="">Sin indicar</option>
+              <option>1 a 4</option>
+              <option>5 a 10</option>
+              <option>11 a 25</option>
+              <option>Más de 25</option>
+            </select>
+          </div>
+        </div>
+        <div class="field"><label for="mensaje">Mensaje</label><textarea id="mensaje" name="mensaje" rows="5" placeholder="Qué material movéis, cuántos eventos al mes, qué os gustaría resolver…"></textarea></div>
+        <input type="text" name="_gotcha" class="sr-only" tabindex="-1" autocomplete="off" aria-hidden="true">
+        <div class="alert alert--ok" id="formOk" role="status"></div>
+        <div class="alert alert--err" id="formErr" role="alert"></div>
+        <div class="form-foot">
+          <p class="caption">Solo usaremos tus datos para responder a esta consulta.</p>
+          <button class="btn btn--primary btn--lg" type="submit">Enviar mensaje</button>
+        </div>
+      </form>
+    </div>
+
+    <aside>
+      <div class="direct">
+        <a href="tel:+34667938630">
+          <span class="ic"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1.9.4 1.8.7 2.7a2 2 0 0 1-.5 2.1L8 9.8a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.7.7a2 2 0 0 1 1.7 2z"/></svg></span>
+          <span><span class="k">Teléfono</span><span class="v" style="display:block">667 93 86 30</span></span>
+        </a>
+        <a href="mailto:selbaidea@gmail.com">
+          <span class="ic"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M3 7l9 6 9-6"/></svg></span>
+          <span><span class="k">Correo</span><span class="v" style="display:block">selbaidea@gmail.com</span></span>
+        </a>
+        <div class="item">
+          <span class="ic"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 21s-7-6.2-7-11a7 7 0 0 1 14 0c0 4.8-7 11-7 11z"/><circle cx="12" cy="10" r="2.5"/></svg></span>
+          <span><span class="k">Dónde estamos</span><span class="v" style="display:block">Huesca, Aragón</span><span class="caption">Trabajamos con empresas de toda España.</span></span>
+        </div>
       </div>
-      <div class="cols">
-        <div class="col"><h4>Producto</h4><a href="producto.html">Cómo funciona</a><a href="precios.html">Precios</a><a href="contacto.html">Solicitar demo</a></div>
-        <div class="col"><h4>Contacto</h4><a href="contacto.html">Escríbenos</a><a href="mailto:hola@selbacargo.com">hola@selbacargo.com</a><a href="contacto.html">Lista de espera</a></div>
+
+      <div class="note mt-24">
+        <p><strong>Cómo es la demo.</strong> Te enseñamos la app con ejemplos parecidos a tu operativa. Después, si te encaja, te damos acceso para probarla.</p>
+      </div>
+    </aside>
+  </div>
+</section>
+
+</main>
+
+<footer class="site-footer">
+  <div class="container">
+    <div class="foot-grid">
+      <div>
+        <img src="img/logo-selba-cargo-light.png" alt="SELBA Cargo" width="107" height="32">
+        <p>Coordinación de Almacenes, Recursos y Gestión Operativa. Software para empresas técnicas de eventos.</p>
+      </div>
+      <div>
+        <h4>Producto</h4>
+        <a href="producto.html">Cómo funciona</a>
+        <a href="precios.html">Precios</a>
+        <a href="precios.html#modulos">Módulos</a>
+      </div>
+      <div>
+        <h4>Empresa</h4>
+        <a href="contacto.html">Solicitar demo</a>
+        <a href="contacto.html">Contacto</a>
+      </div>
+      <div>
+        <h4>Contacto</h4>
+        <a href="tel:+34667938630">667 93 86 30</a>
+        <a href="mailto:selbaidea@gmail.com">selbaidea@gmail.com</a>
+        <a href="contacto.html">Huesca, España</a>
       </div>
     </div>
-    <div class="legal">
-      <span class="idea">Un producto de <b>SELBA IDEA</b></span>
+    <div class="foot-legal">
+      <span>Un producto de <b>SELBA IDEA</b></span>
       <span>© <span data-year>2026</span> SELBA IDEA · Huesca, España</span>
     </div>
   </div>
