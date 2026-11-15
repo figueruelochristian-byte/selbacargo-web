@@ -250,9 +250,11 @@ strong{color:var(--text);font-weight:600}
 .mod .tag{font-size:.75rem;font-weight:600;color:var(--text-3);white-space:nowrap}
 .mod .tag.inc{color:var(--success)}
 @media (max-width:860px){
-  .mod{grid-template-columns:56px 1fr;gap:6px 18px;align-items:start}
-  .mod .circle{grid-row:span 3}
-  .mod .tag{order:-1}
+  .mod{grid-template-columns:56px minmax(0,1fr);gap:4px 18px;align-items:start}
+  .mod .circle{grid-column:1;grid-row:1 / span 3}
+  .mod .tag{grid-column:2;grid-row:1}
+  .mod h3{grid-column:2;grid-row:2}
+  .mod p{grid-column:2;grid-row:3}
 }
 
 /* Recorrido */
