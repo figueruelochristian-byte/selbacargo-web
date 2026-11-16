@@ -1,0 +1,5 @@
+# Aviso de fallos de seguridad en selbacargo.com
+Contact: mailto:selbaidea@gmail.com
+Expires: 2027-11-16T00:00:00.000Z
+Preferred-Languages: es, en
+Canonical: https://selbacargo.com/.well-known/security.txt

@@ -24,13 +24,31 @@
   var ok = document.getElementById('formOk');
   var err = document.getElementById('formErr');
 
+  // Protección antibots sin servicios externos ni cookies:
+  // 1) campo trampa invisible (_gotcha): una persona no lo ve ni lo rellena;
+  // 2) tiempo mínimo: nadie rellena el formulario en menos de 3 segundos;
+  // 3) límite de enlaces: el spam suele venir cargado de enlaces.
+  var startedAt = Date.now();
+  var MIN_MS = 3000, MAX_LINKS = 2;
+
   function show(el, msg) { ok.classList.remove('is-on'); err.classList.remove('is-on'); if (el) { el.textContent = msg; el.classList.add('is-on'); } }
   function val(name) { var f = form.elements[name]; return f ? f.value.trim() : ''; }
 
   form.addEventListener('submit', function (e) {
     e.preventDefault();
     show(null);
-    if (val('_gotcha')) return;
+    // Bot detectado: se finge el envío y no se manda nada
+    if (val('_gotcha') || Date.now() - startedAt < MIN_MS) {
+      form.reset();
+      show(ok, 'Mensaje enviado. Te responderemos lo antes posible.');
+      return;
+    }
+    var links = (val('mensaje').match(/https?:\/\/|www\./gi) || []).length;
+    if (links > MAX_LINKS) {
+      show(err, 'Por seguridad, el mensaje no puede llevar más de ' + MAX_LINKS + ' enlaces.');
+      form.elements.mensaje.focus();
+      return;
+    }
 
     var bad = [];
     if (!val('nombre')) bad.push('nombre');

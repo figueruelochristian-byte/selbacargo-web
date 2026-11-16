@@ -61,12 +61,12 @@
       -->
       <form class="form" id="contactForm" data-formspree="" data-email="selbaidea@gmail.com" novalidate>
         <div class="row2">
-          <div class="field"><label for="nombre">Nombre <span class="req">*</span></label><input id="nombre" name="nombre" type="text" autocomplete="name" required></div>
-          <div class="field"><label for="empresa">Empresa</label><input id="empresa" name="empresa" type="text" autocomplete="organization"></div>
+          <div class="field"><label for="nombre">Nombre <span class="req">*</span></label><input id="nombre" name="nombre" type="text" autocomplete="name" maxlength="80" required></div>
+          <div class="field"><label for="empresa">Empresa</label><input id="empresa" name="empresa" type="text" autocomplete="organization" maxlength="120"></div>
         </div>
         <div class="row2">
-          <div class="field"><label for="email">Correo electrónico <span class="req">*</span></label><input id="email" name="email" type="email" autocomplete="email" required></div>
-          <div class="field"><label for="tel">Teléfono</label><input id="tel" name="telefono" type="tel" autocomplete="tel"></div>
+          <div class="field"><label for="email">Correo electrónico <span class="req">*</span></label><input id="email" name="email" type="email" autocomplete="email" maxlength="120" required></div>
+          <div class="field"><label for="tel">Teléfono</label><input id="tel" name="telefono" type="tel" autocomplete="tel" maxlength="30"></div>
         </div>
         <div class="row2">
           <div class="field"><label for="asunto">Motivo</label>
@@ -87,7 +87,7 @@
             </select>
           </div>
         </div>
-        <div class="field"><label for="mensaje">Mensaje</label><textarea id="mensaje" name="mensaje" rows="5" placeholder="Qué material movéis, cuántos eventos al mes, qué os gustaría resolver…"></textarea></div>
+        <div class="field"><label for="mensaje">Mensaje</label><textarea id="mensaje" name="mensaje" rows="5" maxlength="3000" placeholder="Qué material movéis, cuántos eventos al mes, qué os gustaría resolver…"></textarea></div>
         <input type="text" name="_gotcha" class="sr-only" tabindex="-1" autocomplete="off" aria-hidden="true">
         <div class="alert alert--ok" id="formOk" role="status"></div>
         <div class="alert alert--err" id="formErr" role="alert"></div>
@@ -155,6 +155,6 @@
   </div>
 </footer>
 
-<script src="script.js"></script>
+<script src="script.js" defer></script>
 </body>
 </html>
