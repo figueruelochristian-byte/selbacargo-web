@@ -438,6 +438,7 @@ strong{color:var(--text);font-weight:600}
 .foot-grid a:hover{color:var(--accent)}
 .foot-legal{border-top:1px solid rgba(255,255,255,.1);padding-top:22px;display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap;font-size:.8125rem;color:#7A7E87}
 .foot-legal b{color:#D9DBE0;font-weight:600}
+.foot-sello{text-align:center;margin-top:14px}
 @media (max-width:900px){.foot-grid{grid-template-columns:1fr 1fr}}
 @media (max-width:520px){.foot-grid{grid-template-columns:1fr}}
 

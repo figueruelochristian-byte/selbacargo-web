@@ -1,0 +1,49 @@
+/* =====================================================================
+   SELLO «DISEÑADO POR SELBA I.D.E.A.» — componente estándar
+   ---------------------------------------------------------------------
+   Copiar SIN CAMBIOS a cada web de SELBA: este archivo + el símbolo
+   (selba-icono.png) + el marcado del enlace.
+
+   Única adaptación permitida: el contraste.
+     · .selba-sello            → fondos oscuros o de color (por defecto)
+     · .selba-sello--claro     → fondos claros
+   Medidas, tipografía y comportamiento NO se tocan.
+   ===================================================================== */
+.selba-sello{
+  --selba-bosque: #2D5A3D;
+  --selba-fresco: #4A8A5C;
+  --selba-fondo: #FFFFFF;
+  --selba-texto: #2D5A3D;
+  --selba-borde: rgba(255,255,255,.0);
+
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  height: 26px;
+  padding: 0 11px 0 6px;
+  border-radius: 13px;
+  border: 1px solid var(--selba-borde);
+  background: var(--selba-fondo);
+  color: var(--selba-texto);
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 11px;
+  line-height: 1;
+  letter-spacing: .02em;
+  text-decoration: none;
+  white-space: nowrap;
+  opacity: .9;
+  transition: opacity .2s ease, box-shadow .2s ease;
+}
+.selba-sello:hover{ opacity: 1; box-shadow: 0 0 0 2px var(--selba-fresco); }
+.selba-sello:focus-visible{ outline: 2px solid var(--selba-fresco); outline-offset: 2px; opacity: 1; }
+.selba-sello__simbolo{ width: 16px; height: 16px; flex: 0 0 16px; display: block; }
+.selba-sello__texto{ font-weight: 400; }
+.selba-sello__texto strong{ font-weight: 700; color: var(--selba-bosque); }
+
+/* Fondos claros: mismo sello, invertido a verde bosque */
+.selba-sello--claro{
+  --selba-fondo: #2D5A3D;
+  --selba-texto: #FFFFFF;
+}
+.selba-sello--claro .selba-sello__texto strong{ color: #FFFFFF; }
+.selba-sello--claro .selba-sello__simbolo{ filter: brightness(0) invert(1); }
